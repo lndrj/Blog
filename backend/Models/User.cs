@@ -6,7 +6,7 @@ public class User
     public string username { get; set; }
     public string email { get; set; }
     public string password { get; set; }
-    public DateTime createdAt { get; set; }
+    public DateTime createdAt { get; set; } = DateTime.Now;
     
     public ICollection<Comment> Comments { get; set; }
     

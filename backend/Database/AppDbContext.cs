@@ -21,5 +21,9 @@ public class AppDbContext : DbContext
             .HasOne(c => c.User)
             .WithMany(u => u.Comments)
             .HasForeignKey(c => c.userId);
+
+        modelBuilder.Entity<Article>()
+            .Property(a => a.category)
+            .HasConversion<int>();
     }
 }
